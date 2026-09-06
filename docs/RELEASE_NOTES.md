@@ -6,6 +6,12 @@ Versions track upstream RapidRAW with a `-ctl.N` suffix for this fork's changes.
 
 Base: upstream `ec50408e` (v1.6.3).
 
+For the Logi MX Creative Console plugin that uses this API, see
+https://github.com/jiyang1018/rapidraw-logi-plugin.
+
+Installs in place of upstream RapidRAW 1.6.3 (same app id and settings); installing upstream
+again switches back.
+
 ### Added
 
 * **External control server** (`127.0.0.1:47820`, newline-delimited JSON). Hardware

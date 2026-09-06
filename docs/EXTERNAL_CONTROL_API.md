@@ -24,7 +24,7 @@ bound, RapidRAW logs a warning and runs normally without the server.
 On connect the server sends a greeting and, if it has one, the most recent state snapshot:
 
 ```json
-{"type":"hello","app":"RapidRAW","version":"1.6.3","protocol":1}
+{"type":"hello","app":"RapidRAW","version":"1.6.3-ctl.1","protocol":1}
 {"type":"state", ...}
 ```
 

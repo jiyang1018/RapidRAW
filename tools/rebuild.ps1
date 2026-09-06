@@ -18,8 +18,9 @@
   build (default) | dev | check
 
 .PARAMETER Bundles
-  Tauri bundle targets for -Mode build. Default "nsis". Use "none" for just the exe, or
-  "nsis,msi" for both installers.
+  Tauri bundle targets for -Mode build. Default "nsis". Use "none" for just the exe.
+  "msi" is not available while the version carries the -ctl.N suffix (WiX wants a plain
+  major.minor.patch).
 
 .PARAMETER Clean
   Remove the app crate's own build artifacts first (cargo clean -p RapidRAW). Dependencies

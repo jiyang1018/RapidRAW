@@ -1,5 +1,8 @@
 name: 'Release: Build & Package App'
 
+# Fork note: the Android job is removed (it needs upstream's signing secrets).
+# Creating a GitHub release on this fork builds the desktop installers and attaches them.
+
 on:
   release:
     types: [created]
@@ -52,11 +55,6 @@ jobs:
             target: ''
             args: '--features tethering'
             asset-prefix: '03_tethering'
-          - platform: 'ubuntu-latest'
-            mobile: 'android'
-            target: 'aarch64-linux-android'
-            args: '--target aarch64'
-            asset-prefix: '04'
     uses: ./.github/workflows/build.yml
     with:
       release-id: ${{ github.event.release.id }}
