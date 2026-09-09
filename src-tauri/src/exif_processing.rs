@@ -244,6 +244,14 @@ pub fn load_sidecar(sidecar_path: &Path) -> ImageMetadata {
     meta
 }
 
+pub fn load_sidecar_with_exif(sidecar_path: &Path, source_path: &Path) -> ImageMetadata {
+    let mut meta = load_sidecar(sidecar_path);
+    if meta.exif.is_none() {
+        meta.exif = read_rrexif_sidecar(source_path);
+    }
+    meta
+}
+
 fn to_ur64(val: &exif::Rational) -> uR64 {
     uR64 {
         nominator: val.num,
