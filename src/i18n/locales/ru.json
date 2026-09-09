@@ -1010,6 +1010,9 @@
         "clearSearch": "Очистить поиск",
         "collapse": "Свернуть",
         "expand": "Развернуть",
+        "moreOptions": "Опции",
+        "navBack": "Назад",
+        "navForward": "Вперед",
         "sortFolders": "Сортировать папки"
       }
     },

@@ -962,6 +962,9 @@
         "clearSearch": "검색 지우기",
         "collapse": "접기",
         "expand": "펼치기",
+        "moreOptions": "옵션",
+        "navBack": "뒤로",
+        "navForward": "앞으로",
         "sortFolders": "폴더 정렬"
       }
     },

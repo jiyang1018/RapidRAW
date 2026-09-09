@@ -1010,6 +1010,9 @@
         "clearSearch": "Wyczyść wyszukiwanie",
         "collapse": "Zwiń",
         "expand": "Rozwiń",
+        "moreOptions": "Opcje",
+        "navBack": "Wstecz",
+        "navForward": "Dalej",
         "sortFolders": "Sortuj foldery"
       }
     },

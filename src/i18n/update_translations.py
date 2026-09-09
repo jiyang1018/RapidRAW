@@ -5,171 +5,158 @@ LOCALES_DIR = Path("./locales")
 
 TRANSLATIONS = {
     "ca": {
-        "export": {
-            "sections": {
-                "destination": "Destinació"
-            },
-            "destination": {
-                "customFolder": "Carpeta personalitzada",
-                "originalFolder": "Carpeta de la imatge original",
-                "subfolder": "Subcarpeta",
-                "subfolderPlaceholder": "p. ex. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Afegeix una carpeta",
+                "tooltips": {
+                    "moreOptions": "Opcions",
+                    "navBack": "Enrere",
+                    "navForward": "Endavant"
+                }
             }
         }
     },
     "de": {
-        "export": {
-            "sections": {
-                "destination": "Zielort"
-            },
-            "destination": {
-                "customFolder": "Benutzerdefinierter Ordner",
-                "originalFolder": "Ursprungsordner des Bildes",
-                "subfolder": "Unterordner",
-                "subfolderPlaceholder": "z. B. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Ordner hinzufügen",
+                "tooltips": {
+                    "moreOptions": "Optionen",
+                    "navBack": "Zurück",
+                    "navForward": "Vorwärts"
+                }
             }
         }
     },
     "en": {
-        "export": {
-            "sections": {
-                "destination": "Destination"
-            },
-            "destination": {
-                "customFolder": "Custom folder",
-                "originalFolder": "Original image folder",
-                "subfolder": "Subfolder",
-                "subfolderPlaceholder": "e.g. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Add folder",
+                "tooltips": {
+                    "moreOptions": "Options",
+                    "navBack": "Go Back",
+                    "navForward": "Go Forward"
+                }
             }
         }
     },
     "es": {
-        "export": {
-            "sections": {
-                "destination": "Destino"
-            },
-            "destination": {
-                "customFolder": "Carpeta personalizada",
-                "originalFolder": "Carpeta de la imagen original",
-                "subfolder": "Subcarpeta",
-                "subfolderPlaceholder": "p. ej. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Añadir carpeta",
+                "tooltips": {
+                    "moreOptions": "Opciones",
+                    "navBack": "Atrás",
+                    "navForward": "Adelante"
+                }
             }
         }
     },
     "fr": {
-        "export": {
-            "sections": {
-                "destination": "Destination"
-            },
-            "destination": {
-                "customFolder": "Dossier personnalisé",
-                "originalFolder": "Dossier de l'image d'origine",
-                "subfolder": "Sous-dossier",
-                "subfolderPlaceholder": "ex. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Ajouter un dossier",
+                "tooltips": {
+                    "moreOptions": "Options",
+                    "navBack": "Retour",
+                    "navForward": "Suivant"
+                }
             }
         }
     },
     "it": {
-        "export": {
-            "sections": {
-                "destination": "Destinazione"
-            },
-            "destination": {
-                "customFolder": "Cartella personalizzata",
-                "originalFolder": "Cartella dell'immagine originale",
-                "subfolder": "Sottocartella",
-                "subfolderPlaceholder": "es. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Aggiungi cartella",
+                "tooltips": {
+                    "moreOptions": "Opzioni",
+                    "navBack": "Indietro",
+                    "navForward": "Avanti"
+                }
             }
         }
     },
     "ja": {
-        "export": {
-            "sections": {
-                "destination": "保存先"
-            },
-            "destination": {
-                "customFolder": "カスタムフォルダー",
-                "originalFolder": "元の画像フォルダー",
-                "subfolder": "サブフォルダー",
-                "subfolderPlaceholder": "例：final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "フォルダーを追加",
+                "tooltips": {
+                    "moreOptions": "オプション",
+                    "navBack": "戻る",
+                    "navForward": "進む"
+                }
             }
         }
     },
     "ko": {
-        "export": {
-            "sections": {
-                "destination": "대상"
-            },
-            "destination": {
-                "customFolder": "사용자 지정 폴더",
-                "originalFolder": "원본 이미지 폴더",
-                "subfolder": "하위 폴더",
-                "subfolderPlaceholder": "예: final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "폴더 추가",
+                "tooltips": {
+                    "moreOptions": "옵션",
+                    "navBack": "뒤로",
+                    "navForward": "앞으로"
+                }
             }
         }
     },
     "pl": {
-        "export": {
-            "sections": {
-                "destination": "Miejsce docelowe"
-            },
-            "destination": {
-                "customFolder": "Folder niestandardowy",
-                "originalFolder": "Folder oryginalnego obrazu",
-                "subfolder": "Podfolder",
-                "subfolderPlaceholder": "np. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Dodaj folder",
+                "tooltips": {
+                    "moreOptions": "Opcje",
+                    "navBack": "Wstecz",
+                    "navForward": "Dalej"
+                }
             }
         }
     },
     "pt": {
-        "export": {
-            "sections": {
-                "destination": "Destino"
-            },
-            "destination": {
-                "customFolder": "Pasta personalizada",
-                "originalFolder": "Pasta da imagem original",
-                "subfolder": "Subpasta",
-                "subfolderPlaceholder": "ex. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Adicionar pasta",
+                "tooltips": {
+                    "moreOptions": "Opções",
+                    "navBack": "Voltar",
+                    "navForward": "Avançar"
+                }
             }
         }
     },
     "ru": {
-        "export": {
-            "sections": {
-                "destination": "Место назначения"
-            },
-            "destination": {
-                "customFolder": "Пользовательская папка",
-                "originalFolder": "Папка исходного изображения",
-                "subfolder": "Вложенная папка",
-                "subfolderPlaceholder": "напр. final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "Добавить папку",
+                "tooltips": {
+                    "moreOptions": "Опции",
+                    "navBack": "Назад",
+                    "navForward": "Вперед"
+                }
             }
         }
     },
     "zh-CN": {
-        "export": {
-            "sections": {
-                "destination": "目标位置"
-            },
-            "destination": {
-                "customFolder": "自定义文件夹",
-                "originalFolder": "原始图像文件夹",
-                "subfolder": "子文件夹",
-                "subfolderPlaceholder": "例如：final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "添加文件夹",
+                "tooltips": {
+                    "moreOptions": "选项",
+                    "navBack": "后退",
+                    "navForward": "前进"
+                }
             }
         }
     },
     "zh-TW": {
-        "export": {
-            "sections": {
-                "destination": "目標位置"
-            },
-            "destination": {
-                "customFolder": "自訂資料夾",
-                "originalFolder": "原始影像資料夾",
-                "subfolder": "子資料夾",
-                "subfolderPlaceholder": "例如：final, WebP"
+        "library": {
+            "folders": {
+                "addFolder": "新增資料夾",
+                "tooltips": {
+                    "moreOptions": "選項",
+                    "navBack": "後退",
+                    "navForward": "前進"
+                }
             }
         }
     }
@@ -221,7 +208,7 @@ def main():
         print(f"Error: Locales directory '{LOCALES_DIR}' does not exist.")
         return
 
-    print("Starting translation updates for export destination settings...")
+    print("Starting translation updates for folder navigation tooltips...")
     for lang, trans in TRANSLATIONS.items():
         file_path = LOCALES_DIR / f"{lang}.json"
         update_json_file(file_path, trans)

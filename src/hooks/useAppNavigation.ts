@@ -322,6 +322,7 @@ export function useAppNavigation({ clearThumbnailQueue, refs }: AppNavigationPro
       preloadedImages?: ImageFile[],
       expandParents = true,
       preserveEditor = false,
+      skipHistory = false,
     ) => {
       const { appSettings, handleSettingsChange } = useSettingsStore.getState();
       const { pinnedFolders } = appSettings || { pinnedFolders: [] };
@@ -330,6 +331,10 @@ export function useAppNavigation({ clearThumbnailQueue, refs }: AppNavigationPro
       const { setProcess } = useProcessStore.getState();
       const { selectedImage, resetHistory, setEditor } = useEditorStore.getState();
       const libraryViewMode = appSettings?.libraryViewMode;
+
+      if (!skipHistory && path) {
+        useLibraryStore.getState().pushNavHistory({ type: 'folder', path });
+      }
 
       if (!preserveEditor) {
         await invoke('cancel_thumbnail_generation');
@@ -423,9 +428,13 @@ export function useAppNavigation({ clearThumbnailQueue, refs }: AppNavigationPro
   );
 
   const handleSelectAlbum = useCallback(
-    async (albumId: string, albumName: string, imagePaths: string[], preserveEditor = false) => {
+    async (albumId: string, albumName: string, imagePaths: string[], preserveEditor = false, skipHistory = false) => {
       const { setLibrary, sortCriteria } = useLibraryStore.getState();
       const { setUI } = useUIStore.getState();
+
+      if (!skipHistory) {
+        useLibraryStore.getState().pushNavHistory({ type: 'album', path: albumId, albumName, images: imagePaths });
+      }
 
       if (!preserveEditor) {
         await invoke('cancel_thumbnail_generation');
@@ -467,7 +476,39 @@ export function useAppNavigation({ clearThumbnailQueue, refs }: AppNavigationPro
     [clearThumbnailQueue],
   );
 
-  const handleOpenFolder = async () => {
+  const handleNavBack = useCallback(async () => {
+    const { navHistory, navIndex, setLibrary } = useLibraryStore.getState();
+
+    if (navIndex > 0) {
+      const targetIndex = navIndex - 1;
+      const target = navHistory[targetIndex];
+      setLibrary({ navIndex: targetIndex });
+
+      if (target.type === 'folder') {
+        handleSelectSubfolder(target.path, false, undefined, true, false, true);
+      } else if (target.type === 'album') {
+        handleSelectAlbum(target.path, target.albumName!, target.images!, false, true);
+      }
+    }
+  }, [handleSelectSubfolder, handleSelectAlbum]);
+
+  const handleNavForward = useCallback(async () => {
+    const { navHistory, navIndex, setLibrary } = useLibraryStore.getState();
+
+    if (navIndex < navHistory.length - 1) {
+      const targetIndex = navIndex + 1;
+      const target = navHistory[targetIndex];
+      setLibrary({ navIndex: targetIndex });
+
+      if (target.type === 'folder') {
+        handleSelectSubfolder(target.path, false, undefined, true, false, true);
+      } else if (target.type === 'album') {
+        handleSelectAlbum(target.path, target.albumName!, target.images!, false, true);
+      }
+    }
+  }, [handleSelectSubfolder, handleSelectAlbum]);
+
+  const handleOpenFolder = useCallback(async () => {
     const { osPlatform, appSettings, handleSettingsChange } = useSettingsStore.getState();
     const { rootPaths, folderTrees, setLibrary } = useLibraryStore.getState();
     const isAndroid = osPlatform === 'android';
@@ -513,7 +554,7 @@ export function useAppNavigation({ clearThumbnailQueue, refs }: AppNavigationPro
       console.error(isAndroid ? 'Failed to open Android library root:' : 'Failed to open directory dialog:', err);
       toast.error(isAndroid ? 'Failed to open library.' : 'Failed to open folder selection dialog.');
     }
-  };
+  }, [handleSelectSubfolder]);
 
   const handleContinueSession = () => {
     const restore = async () => {
@@ -624,6 +665,8 @@ export function useAppNavigation({ clearThumbnailQueue, refs }: AppNavigationPro
     handleSelectSubfolder,
     handleSelectAlbum,
     handleOpenFolder,
+    handleNavBack,
+    handleNavForward,
     handleContinueSession,
   };
 }

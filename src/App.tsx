@@ -347,6 +347,8 @@ function App() {
     handleSelectSubfolder,
     handleSelectAlbum,
     handleOpenFolder,
+    handleNavBack,
+    handleNavForward,
     handleContinueSession,
   } = useAppNavigation({
     clearThumbnailQueue,
@@ -722,10 +724,14 @@ function App() {
               isResizing={isResizing}
               onContextMenu={handleFolderTreeContextMenu}
               onAlbumContextMenu={handleAlbumTreeContextMenu}
-              onSelectAlbum={handleSelectAlbum}
-              onFolderSelect={(path) => handleSelectSubfolder(path, false)}
+              onSelectAlbum={(id, name, images, skipHistory) => handleSelectAlbum(id, name, images, false, skipHistory)}
+              onFolderSelect={(path, skipHistory) =>
+                handleSelectSubfolder(path, false, undefined, true, false, skipHistory)
+              }
               onToggleFolder={handleToggleFolder}
               onOpenFolder={handleOpenFolder}
+              onNavBack={handleNavBack}
+              onNavForward={handleNavForward}
               style={{ width: '100%', height: '100%' }}
               isInstantTransition={isInstantTransition}
             />
@@ -770,6 +776,8 @@ function App() {
       handleSelectSubfolder,
       handleToggleFolder,
       handleOpenFolder,
+      handleNavBack,
+      handleNavForward,
       setUI,
       isInstantTransition,
       exportState,

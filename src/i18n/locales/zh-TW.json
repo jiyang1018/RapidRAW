@@ -962,6 +962,9 @@
         "clearSearch": "清除搜尋",
         "collapse": "摺疊",
         "expand": "展開",
+        "moreOptions": "選項",
+        "navBack": "後退",
+        "navForward": "前進",
         "sortFolders": "對資料夾排序"
       }
     },

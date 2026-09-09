@@ -962,6 +962,9 @@
         "clearSearch": "清除搜索",
         "collapse": "折叠",
         "expand": "展开",
+        "moreOptions": "选项",
+        "navBack": "后退",
+        "navForward": "前进",
         "sortFolders": "对文件夹排序"
       }
     },

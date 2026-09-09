@@ -964,6 +964,9 @@
         "clearSearch": "Clear search",
         "collapse": "Collapse",
         "expand": "Expand",
+        "moreOptions": "Options",
+        "navBack": "Go Back",
+        "navForward": "Go Forward",
         "sortFolders": "Sort Folders"
       }
     },
