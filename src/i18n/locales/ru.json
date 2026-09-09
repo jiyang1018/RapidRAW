@@ -1134,6 +1134,7 @@
     },
     "thumbnailFit": {
       "fillSquare": "Заполнить квадрат",
+      "justified": "Мозаика",
       "originalRatio": "Исходный формат"
     },
     "thumbnailSize": {

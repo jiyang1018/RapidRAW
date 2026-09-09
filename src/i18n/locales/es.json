@@ -1110,6 +1110,7 @@
     },
     "thumbnailFit": {
       "fillSquare": "Llenar cuadrado",
+      "justified": "Mosaico",
       "originalRatio": "Proporción original"
     },
     "thumbnailSize": {

@@ -1086,6 +1086,7 @@
     },
     "thumbnailFit": {
       "fillSquare": "Fill Square",
+      "justified": "Masonry",
       "originalRatio": "Original Ratio"
     },
     "thumbnailSize": {

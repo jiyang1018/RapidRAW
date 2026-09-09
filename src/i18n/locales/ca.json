@@ -1086,6 +1086,7 @@
     },
     "thumbnailFit": {
       "fillSquare": "Omplir el quadrat",
+      "justified": "Mosaic",
       "originalRatio": "Proporció original"
     },
     "thumbnailSize": {

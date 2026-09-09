@@ -6,157 +6,92 @@ LOCALES_DIR = Path("./locales")
 TRANSLATIONS = {
     "ca": {
         "library": {
-            "folders": {
-                "addFolder": "Afegeix una carpeta",
-                "tooltips": {
-                    "moreOptions": "Opcions",
-                    "navBack": "Enrere",
-                    "navForward": "Endavant"
-                }
+            "thumbnailFit": {
+                "justified": "Mosaic"
             }
         }
     },
     "de": {
         "library": {
-            "folders": {
-                "addFolder": "Ordner hinzufügen",
-                "tooltips": {
-                    "moreOptions": "Optionen",
-                    "navBack": "Zurück",
-                    "navForward": "Vorwärts"
-                }
+            "thumbnailFit": {
+                "justified": "Mosaik"
             }
         }
     },
     "en": {
         "library": {
-            "folders": {
-                "addFolder": "Add folder",
-                "tooltips": {
-                    "moreOptions": "Options",
-                    "navBack": "Go Back",
-                    "navForward": "Go Forward"
-                }
+            "thumbnailFit": {
+                "justified": "Masonry"
             }
         }
     },
     "es": {
         "library": {
-            "folders": {
-                "addFolder": "Añadir carpeta",
-                "tooltips": {
-                    "moreOptions": "Opciones",
-                    "navBack": "Atrás",
-                    "navForward": "Adelante"
-                }
+            "thumbnailFit": {
+                "justified": "Mosaico"
             }
         }
     },
     "fr": {
         "library": {
-            "folders": {
-                "addFolder": "Ajouter un dossier",
-                "tooltips": {
-                    "moreOptions": "Options",
-                    "navBack": "Retour",
-                    "navForward": "Suivant"
-                }
+            "thumbnailFit": {
+                "justified": "Mosaïque"
             }
         }
     },
     "it": {
         "library": {
-            "folders": {
-                "addFolder": "Aggiungi cartella",
-                "tooltips": {
-                    "moreOptions": "Opzioni",
-                    "navBack": "Indietro",
-                    "navForward": "Avanti"
-                }
+            "thumbnailFit": {
+                "justified": "Mosaico"
             }
         }
     },
     "ja": {
         "library": {
-            "folders": {
-                "addFolder": "フォルダーを追加",
-                "tooltips": {
-                    "moreOptions": "オプション",
-                    "navBack": "戻る",
-                    "navForward": "進む"
-                }
+            "thumbnailFit": {
+                "justified": "メイソンリー"
             }
         }
     },
     "ko": {
         "library": {
-            "folders": {
-                "addFolder": "폴더 추가",
-                "tooltips": {
-                    "moreOptions": "옵션",
-                    "navBack": "뒤로",
-                    "navForward": "앞으로"
-                }
+            "thumbnailFit": {
+                "justified": "메이슨리"
             }
         }
     },
     "pl": {
         "library": {
-            "folders": {
-                "addFolder": "Dodaj folder",
-                "tooltips": {
-                    "moreOptions": "Opcje",
-                    "navBack": "Wstecz",
-                    "navForward": "Dalej"
-                }
+            "thumbnailFit": {
+                "justified": "Mozaika"
             }
         }
     },
     "pt": {
         "library": {
-            "folders": {
-                "addFolder": "Adicionar pasta",
-                "tooltips": {
-                    "moreOptions": "Opções",
-                    "navBack": "Voltar",
-                    "navForward": "Avançar"
-                }
+            "thumbnailFit": {
+                "justified": "Mosaico"
             }
         }
     },
     "ru": {
         "library": {
-            "folders": {
-                "addFolder": "Добавить папку",
-                "tooltips": {
-                    "moreOptions": "Опции",
-                    "navBack": "Назад",
-                    "navForward": "Вперед"
-                }
+            "thumbnailFit": {
+                "justified": "Мозаика"
             }
         }
     },
     "zh-CN": {
         "library": {
-            "folders": {
-                "addFolder": "添加文件夹",
-                "tooltips": {
-                    "moreOptions": "选项",
-                    "navBack": "后退",
-                    "navForward": "前进"
-                }
+            "thumbnailFit": {
+                "justified": "瀑布流"
             }
         }
     },
     "zh-TW": {
         "library": {
-            "folders": {
-                "addFolder": "新增資料夾",
-                "tooltips": {
-                    "moreOptions": "選項",
-                    "navBack": "後退",
-                    "navForward": "前進"
-                }
+            "thumbnailFit": {
+                "justified": "瀑布流"
             }
         }
     }
@@ -208,7 +143,7 @@ def main():
         print(f"Error: Locales directory '{LOCALES_DIR}' does not exist.")
         return
 
-    print("Starting translation updates for folder navigation tooltips...")
+    print("Starting translation updates for Masonry/Justified thumbnail fit...")
     for lang, trans in TRANSLATIONS.items():
         file_path = LOCALES_DIR / f"{lang}.json"
         update_json_file(file_path, trans)

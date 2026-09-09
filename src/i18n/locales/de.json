@@ -1086,6 +1086,7 @@
     },
     "thumbnailFit": {
       "fillSquare": "Quadrat füllen",
+      "justified": "Mosaik",
       "originalRatio": "Original-Verhältnis"
     },
     "thumbnailSize": {
