@@ -457,23 +457,6 @@ function App() {
 
   useAndroidBackHandler();
 
-  const handleToggleFullScreen = useCallback(() => {
-    const { zoom, selectedImage } = useEditorStore.getState();
-    const currentlyZoomed = zoom > 1.01;
-    setUI({ isInstantTransition: currentlyZoomed });
-
-    if (isFullScreen) {
-      setUI({ isFullScreen: false });
-    } else {
-      if (!selectedImage) return;
-      setUI({ isFullScreen: true });
-    }
-
-    if (currentlyZoomed) {
-      setTimeout(() => setUI({ isInstantTransition: false }), 100);
-    }
-  }, [isFullScreen, setUI]);
-
   useKeyboardShortcuts({
     sortedImageList,
     handleBackToLibrary,
@@ -481,7 +464,6 @@ function App() {
     handleGoHome,
     handleImageSelect,
     handlePasteFiles,
-    handleToggleFullScreen,
     handleZoomChange,
   });
 
