@@ -226,8 +226,8 @@ export default function MainLibrary(props: MainLibraryProps) {
 
   const translatedThumbnailAspectRatioOptions = useMemo(
     () => [
-      { id: ThumbnailAspectRatio.Cover, label: t('library.thumbnailFit.fillSquare') },
       { id: ThumbnailAspectRatio.Contain, label: t('library.thumbnailFit.originalRatio') },
+      { id: ThumbnailAspectRatio.Cover, label: t('library.thumbnailFit.fillSquare') },
       { id: ThumbnailAspectRatio.Justified, label: t('library.thumbnailFit.justified') },
     ],
     [t],
